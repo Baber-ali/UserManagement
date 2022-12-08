@@ -45,10 +45,10 @@ namespace UserManagement.API.Controllers
             if (Authenticate(model))
             {
                 string token = GenerateToken(model);
-                return Ok(token);
+                return Ok(new { Token = token });
             }
 
-            return NotFound("User Not Found");
+            return NotFound("Username or Password is not correct");
         }
 
         /// <summary>

@@ -29,7 +29,7 @@ namespace UserManagementAPI.Controllers
             }
             catch
             {
-                return NotFound();
+                return StatusCode(StatusCodes.Status500InternalServerError);
             }
         }
 
@@ -40,7 +40,7 @@ namespace UserManagementAPI.Controllers
             try
             {
                 _userService.AddUser(user);
-                return Ok();
+                return Ok(new { status = true });
             }
             catch
             {
@@ -55,7 +55,7 @@ namespace UserManagementAPI.Controllers
             try
             {
                 _userService.EditUser(user);
-                return Ok();
+                return Ok(new { status = true });
             }
             catch
             {
@@ -70,7 +70,7 @@ namespace UserManagementAPI.Controllers
             try
             {
                 _userService.DeleteUser(Id);
-                return Ok();
+                return Ok(new { status = true });
             }
             catch (Exception)
             {
