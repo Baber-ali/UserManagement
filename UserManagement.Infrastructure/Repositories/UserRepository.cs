@@ -43,7 +43,6 @@ namespace UserManagement.Infrastructure.Repositories
                 userData.UserName = user.UserName;
                 userData.Password = user.Password;
                 userData.Email = user.Email;
-                userData.Photo = user.Photo;
             }
         }
 

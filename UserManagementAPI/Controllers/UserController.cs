@@ -47,7 +47,7 @@ namespace UserManagementAPI.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError);
             }
         }
-
+        
         [HttpPut]
         [Route("Edit")]
         public IActionResult EditUser(User user)
